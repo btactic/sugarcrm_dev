@@ -5135,16 +5135,21 @@ class SugarBean
         {
             return true;
         }
+        $users=array();
+        $users[]=$user_id;
+        $res = $this->db->query("select id from users where reports_to_id = '$user_id'");
+        while($row = $this->db->fetchByAssoc($res))
+            $users[]=$row['id'];
         //if there is an assigned_user that is the owner
         if(isset($this->assigned_user_id))
         {
-            if($this->assigned_user_id == $user_id) return true;
+            if(in_array($this->assigned_user_id,$users)) return true;
             return false;
         }
         else
         {
             //other wise if there is a created_by that is the owner
-            if(isset($this->created_by) && $this->created_by == $user_id)
+            if(isset($this->created_by) && in_array($this->created_by,$users))
             {
                 return true;
             }
@@ -5161,11 +5166,11 @@ class SugarBean
     {
         if(isset($this->field_defs['assigned_user_id']))
         {
-            return " $this->table_name.assigned_user_id ='$user_id' ";
+            return " $this->table_name.assigned_user_id ='$user_id' or $this->table_name.assigned_user_id in (select id from users where reports_to_id = '$user_id') ";
         }
         if(isset($this->field_defs['created_by']))
         {
-            return " $this->table_name.created_by ='$user_id' ";
+            return " $this->table_name.created_by ='$user_id' or $this->table_name.created_by in (select id from users where reports_to_id = '$user_id') ";
         }
         return '';
     }
