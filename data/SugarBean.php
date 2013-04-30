@@ -5166,11 +5166,11 @@ class SugarBean
     {
         if(isset($this->field_defs['assigned_user_id']))
         {
-            return " $this->table_name.assigned_user_id ='$user_id' or $this->table_name.assigned_user_id in (select id from users where reports_to_id = '$user_id') ";
+            return " ( $this->table_name.assigned_user_id ='$user_id' or $this->table_name.assigned_user_id in (select id from users where reports_to_id = '$user_id') ) ";
         }
         if(isset($this->field_defs['created_by']))
         {
-            return " $this->table_name.created_by ='$user_id' or $this->table_name.created_by in (select id from users where reports_to_id = '$user_id') ";
+            return " ( $this->table_name.created_by ='$user_id' or $this->table_name.created_by in (select id from users where reports_to_id = '$user_id') ) ";
         }
         return '';
     }
