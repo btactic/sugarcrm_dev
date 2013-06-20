@@ -311,6 +311,7 @@ class One2MBeanRelationship extends One2MRelationship
         if (!$linkIsLHS)
             $startingTable = (empty($params['right_join_table_alias']) ? $this->def['rhs_table'] : $params['right_join_table_alias']);
         $startingKey = $linkIsLHS ? $this->def['lhs_key'] : $this->def['rhs_key'];
+        $startingTable = $linkIsLHS ? $this->def['lhs_table'] : $this->def['rhs_table'];
         $targetTable = $linkIsLHS ? $this->def['rhs_table'] : $this->def['lhs_table'];
         $targetKey = $linkIsLHS ? $this->def['rhs_key'] : $this->def['lhs_key'];
         $join_type= isset($params['join_type']) ? $params['join_type'] : ' INNER JOIN ';
@@ -347,7 +348,7 @@ class One2MBeanRelationship extends One2MRelationship
 
         $query .= "$join_type $targetTableWithAlias ON $startingTable.$startingKey=$targetTable.$targetKey AND $targetTable.deleted=0\n"
         //Next add any role filters
-               . $this->getRoleWhere($targetTable) . "\n";
+               . $this->getRoleWhere($startingTable) . "\n";
 
         if (!empty($params['return_as_array'])) {
             $return_array = true;
