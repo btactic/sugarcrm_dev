@@ -85,7 +85,7 @@
 		<td valign="top" scope="row"><slot>{APP.LBL_ASSIGNED_TO}</slot></td>
 		<td valign="top"><slot>{ASSIGNED_TO}&nbsp;</slot></td>
 		<td scope="row"><slot>{PARENT_TYPE}</slot></td>
-		<td><slot>{PARENT_NAME}</slot></td>
+		<td><slot><a href="index.php?module={PARENT_TYPE_UNTRANSLATE}&action=DetailView&record={PARENT_ID}">{PARENT_NAME}</></slot></td>
 	</tr>
 	<tr>
         <td scope="row"><slot>{MOD.LBL_FROM}</slot></td>
