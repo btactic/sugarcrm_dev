@@ -609,6 +609,11 @@ class Email extends SugarBean {
 		}
 
 		$mail->Sender = $mail->From; /* set Return-Path field in header to reduce spam score in emails sent via Sugar's Email module */
+		//Send notifies to current-user principal email.
+		if ($request['sendReadRecipt']){
+			$this->read_recipt = 1;
+			$mail->ConfirmReadingTo = $current_user->email1;
+		}
 
 		if (!empty($replyToAddress)) {
 			$mail->AddReplyTo($replyToAddress,$locale->translateCharsetMIME(trim( $replyToName), 'UTF-8', $OBCharset));
@@ -2112,6 +2117,8 @@ class Email extends SugarBean {
 		}
 		$mail->Sender = $mail->From; /* set Return-Path field in header to reduce spam score in emails sent via Sugar's Email module */
 		$mail->AddReplyTo($ReplyToAddr,$locale->translateCharsetMIME(trim($ReplyToName), 'UTF-8', $OBCharset));
+		if($this->read_recipt)
+			$mail->ConfirmReadingTo = $ReplyToAddr;
 
 		//$mail->Subject = html_entity_decode($this->name, ENT_QUOTES, 'UTF-8');
 		$mail->Subject = $this->name;

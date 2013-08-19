@@ -1862,6 +1862,7 @@ SE.composeLayout = {
         var to = trim(document.getElementById('addressTO' + idx).value);
         var cc = trim(document.getElementById('addressCC' + idx).value);
         var bcc = trim(document.getElementById('addressBCC' + idx).value);
+        var readRecipt = document.getElementById('emailReadRecipt' + idx).value == "on" ? true : false ;
         var email_id = document.getElementById('email_id' + idx).value;
         var composeType = document.getElementById('composeType').value;
         var parent_type = document.getElementById("parent_type").value;
@@ -1919,6 +1920,7 @@ SE.composeLayout = {
         form.sendTo.value = to;
         form.sendCc.value = cc;
         form.sendBcc.value = bcc;
+        form.sendReadRecipt.value = readRecipt;
         form.email_id.value = email_id;
         form.composeType.value = composeType;
         form.composeLayoutId.value = 'composeLayout' + idx;

@@ -1560,6 +1560,7 @@ $app_strings = array (
     'LBL_EMAIL_ERROR_PREPEND'               => 'Error:',
   'LBL_EMAIL_INVALID_PERSONAL_OUTBOUND' => 'The outbound mail server selected for the mail account you are using is invalid.  Check the settings or select a different mail server for the mail account.',
   'LBL_EMAIL_INVALID_SYSTEM_OUTBOUND' => 'An outgoing mail server is not configured to send emails. Please configure an outgoing mail server or select an outgoing mail server for the mail account that you are using in Settings >> Mail Account.',
+    'LBL_EMAIL_READ_RECIPT'                   => 'Request Read Recipt',
     'LBL_EMAIL_SHOW_READ'                   => 'Show All',
     'LBL_EMAIL_SHOW_UNREAD_ONLY'            => 'Show Unread Only',
     'LBL_EMAIL_SIGNATURES'                  => 'Signatures',

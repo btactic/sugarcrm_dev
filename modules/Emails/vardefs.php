@@ -264,6 +264,14 @@ $dictionary['Email'] = array(
 			'len'=> '36',
 			'reportable' => false,
 		),
+		'read_recipt' => array (
+			'name' => 'read_recipt',
+			'vname' => 'LBL_READ_RECIPT',
+			'type' => 'bool',
+			'required' => false,
+			'reportable'=>false,
+			'comment' => 'Request Read Recipt',
+		),
 		'created_by_link' => array (
 			'name' => 'created_by_link',
 			'type' => 'link',

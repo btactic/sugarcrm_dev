@@ -49,6 +49,7 @@ SUGAR.email2.templates['compose'] = '<div id="composeLayout{idx}" class="ylayout
 '		<input type="hidden" id="sendTo" name="sendTo">' +
 '		<input type="hidden" id="sendBcc" name="sendBcc">' +
 '		<input type="hidden" id="sendCc" name="sendCc">' +
+'		<input type="hidden" id="sendReadRecipt" name="sendReadRecipt">' +
 '		<input type="hidden" id="setEditor" name="setEditor">' +
 '		<input type="hidden" id="saveToSugar" name="saveToSugar">' +
 '		<input type="hidden" id="parent_id" name="parent_id">' +
@@ -138,6 +139,16 @@ SUGAR.email2.templates['compose'] = '<div id="composeLayout{idx}" class="ylayout
 '								<div class="ac_autocomplete">' +
 '									&nbsp;&nbsp;<input class="ac_input" type="text" size="96" id="emailSubject{idx}" name="subject{idx}" value="" maxlength="'+SUGAR.email2.composeLayout.subjectMaxlen+'">' +
 '								</div>' +
+'							</td>' +
+'						</tr>' +
+'						<tr>' +
+'							<td class="emailUILabel" NOWRAP width="1%">' +
+'								<div class="ac_autocomplete">' +
+'									&nbsp;&nbsp;<input class="ac_input" type="checkbox" id="emailReadRecipt{idx}" name="readrecipt{idx}">' +
+'								</div>' +
+'							</td>' +
+'							<td class="emailUIField" NOWRAP width="99%">' +
+'								<label for="emailReadRecipt{idx}">{app_strings.LBL_EMAIL_READ_RECIPT}</label>' +
 '							</td>' +
 '						</tr>' +
 '					</table>' +
