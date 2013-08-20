@@ -103,8 +103,8 @@ if(!empty($_REQUEST['load_id']) && !empty($beanList[$_REQUEST['load_module']])) 
 	    		$focus->to_addrs = "$focus->contact_name <$contact->email1>";
     		}
 	    }
-    	if(!empty($_REQUEST['parent_type']) && empty($app_list_strings['record_type_display'][$_REQUEST['parent_type']])){
-    		if(!empty($app_list_strings['record_type_display'][$_REQUEST['load_module']])){
+    	if(!empty($_REQUEST['parent_type']) && empty($app_list_strings['parent_type_display'][$_REQUEST['parent_type']])){
+    		if(!empty($app_list_strings['parent_type_display'][$_REQUEST['load_module']])){
     			$_REQUEST['parent_type'] = $_REQUEST['load_module'];
     			$_REQUEST['parent_id'] = $focus->contact_id;
     			$_REQUEST['parent_name'] = $focus->to_addrs_names;
@@ -477,7 +477,7 @@ $xtpl->assign('TIME_FORMAT', '('. $timedate->get_user_time_format().')');
 $xtpl->assign('TIME_START', substr($focus->time_start,0,5));
 $xtpl->assign('TIME_MERIDIEM', $timedate->AMPMMenu('',$focus->time_start));
 
-$parent_types = $app_list_strings['record_type_display'];
+$parent_types = $app_list_strings['parent_type_display'];
 $disabled_parent_types = ACLController::disabledModuleList($parent_types,false, 'list');
 
 foreach($disabled_parent_types as $disabled_parent_type){

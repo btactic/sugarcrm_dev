@@ -592,7 +592,7 @@ class ImportFieldSanitizeTest extends Sugar_PHPUnit_Framework_TestCase
           'studio' => 'visible',
           'type_name' => 'parent_type',
           'id_name' => 'parent_id',
-          'parent_type' => 'record_type_display',
+          'parent_type' => 'parent_type_display',
         );
         $focus->parent_name = '';
         $focus->parent_id = '';

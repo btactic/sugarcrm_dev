@@ -47,7 +47,7 @@ class TemplateParent extends TemplateEnum{
         $def = parent::get_field_def();
         $def['type_name'] = 'parent_type';
         $def['id_name'] = 'parent_id';
-        $def['parent_type'] = 'record_type_display';
+        $def['parent_type'] = 'parent_type_display';
         $def['source'] = 'non-db';
         $def['studio'] = 'visible';
         return $def;    

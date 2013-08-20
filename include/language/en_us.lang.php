@@ -477,7 +477,7 @@ $app_list_strings = array (
   //Note:  do not translate record_type_default_key
 //       it is the key for the default record_type_module value
   'record_type_default_key' => 'Accounts',
-  'record_type_display' =>
+  'parent_type_display' =>
   array (
     '' => '',
     'Accounts' => 'Account',
@@ -498,7 +498,7 @@ $app_list_strings = array (
 
   ),
 
-  'record_type_display_notes' =>
+  'parent_type_display_notes' =>
   array (
     'Accounts' => 'Account',
     'Contacts' => 'Contact',

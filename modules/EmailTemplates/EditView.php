@@ -233,7 +233,7 @@ if($focus->parent_type == "Account") {
 }
 
 $xtpl->assign("DESCRIPTION", $focus->description);
-$xtpl->assign("TYPE_OPTIONS", get_select_options_with_id($app_list_strings['record_type_display'], $focus->parent_type));
+$xtpl->assign("TYPE_OPTIONS", get_select_options_with_id($app_list_strings['parent_type_display'], $focus->parent_type));
 //$xtpl->assign("DEFAULT_MODULE","Accounts");
 
 if(isset($focus->body)) $xtpl->assign("BODY", $focus->body); else $xtpl->assign("BODY", "");

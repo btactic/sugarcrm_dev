@@ -82,7 +82,7 @@ $xtpl->assign("PARENT_NAME", $focus->parent_name);
 if (isset($focus->parent_type))
 {
 	$xtpl->assign("PARENT_MODULE", $focus->parent_type);
-	$xtpl->assign("PARENT_TYPE", $app_list_strings['record_type_display'][$focus->parent_type]);
+	$xtpl->assign("PARENT_TYPE", $app_list_strings['parent_type_display'][$focus->parent_type]);
 }
 $xtpl->assign("PARENT_ID", $focus->parent_id);
 $xtpl->assign("NAME", $focus->name);

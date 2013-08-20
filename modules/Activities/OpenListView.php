@@ -303,7 +303,7 @@ foreach($open_activity_list as $activity) {
 		$activity_fields['TITLE'] .= $current_module_strings['LBL_LIST_CONTACT'].": ".$activity['contact_name'];
 	}
 	if (!empty($activity['parent_name'])) {
-		$activity_fields['TITLE'] .= "\n".$app_list_strings['record_type_display'][$activity['parent_type']].": ".$activity['parent_name'];
+		$activity_fields['TITLE'] .= "\n".$app_list_strings['parent_type_display'][$activity['parent_type']].": ".$activity['parent_name'];
 	}
 
 	$xtpl->assign("ACTIVITY_MODULE_PNG", SugarThemeRegistry::current()->getImage($activity_fields['MODULE'].'','border="0"', null,null,'.gif',$activity_fields['NAME']));

@@ -66,7 +66,7 @@ class SugarFieldParent extends SugarFieldRelate {
 
 
 		global $app_list_strings;
-		$parent_types = $app_list_strings['record_type_display'];
+		$parent_types = $app_list_strings['parent_type_display'];
 		
 		$disabled_parent_types = ACLController::disabledModuleList($parent_types,false, 'list');
 		foreach($disabled_parent_types as $disabled_parent_type){
@@ -117,7 +117,7 @@ class SugarFieldParent extends SugarFieldRelate {
 
 
 		global $app_list_strings;
-		$parent_types = $app_list_strings['record_type_display'];
+		$parent_types = $app_list_strings['parent_type_display'];
 		$disabled_parent_types = ACLController::disabledModuleList($parent_types,false, 'list');
 		foreach($disabled_parent_types as $disabled_parent_type){
 			if($disabled_parent_type != $focus->parent_type){

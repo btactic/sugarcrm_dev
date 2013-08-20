@@ -4916,7 +4916,7 @@ function getDuplicateRelationListWithTitle($def, $var_def, $module)
  */
 function getTypeDisplayList()
 {
-    return array('record_type_display', 'parent_type_display', 'record_type_display_notes');
+    return array('parent_type_display', 'parent_type_display', 'record_type_display_notes');
 }
 
 /**

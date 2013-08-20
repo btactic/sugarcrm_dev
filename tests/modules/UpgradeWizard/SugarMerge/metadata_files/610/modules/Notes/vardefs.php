@@ -231,12 +231,12 @@ $dictionary['Note'] = array(
  'parent_name'=>
  	array(
 		'name'=> 'parent_name',
-		'parent_type'=>'record_type_display' ,
+		'parent_type'=>'parent_type_display' ,
 		'type_name'=>'parent_type',
 		'id_name'=>'parent_id', 'vname'=>'LBL_RELATED_TO',
 		'type'=>'parent',
 		'source'=>'non-db',
-		'options'=> 'record_type_display_notes',
+		'options'=> 'parent_type_display_notes',
 		),
 
  'contact_name'=>

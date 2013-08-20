@@ -637,7 +637,7 @@ class ViewConvertLead extends SugarView
     	global $app_list_strings;
         global $sugar_config;
         global $app_strings;
-    	$parent_types = $app_list_strings['record_type_display'];
+    	$parent_types = $app_list_strings['parent_type_display'];
 
     	$activities = $this->getActivitiesFromLead($lead);
 

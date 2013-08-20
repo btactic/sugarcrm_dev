@@ -74,7 +74,7 @@ class Bug40969Test extends Sugar_PHPUnit_Framework_TestCase
                                   'options'       => 'parent_type_display',
                                   'type_name'     => 'parent_type',
                                   'id_name'       => 'parent_id',
-                                  'parent_type'   => 'record_type_display',
+                                  'parent_type'   => 'parent_type_display',
                                   'id'            => 'Opportunitiesparent_name',
                                   'custom_module' => 'Opportunities',
                               ),
