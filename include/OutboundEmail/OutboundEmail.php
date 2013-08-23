@@ -465,6 +465,7 @@ class OutboundEmail {
 		} else {
 		    $updvalues = array();
 		    foreach($values as $k => $val) {
+			if($cols[$k]=="mail_smtppass" && strlen($val) == 2) continue; //Don't update password field if new is not defined.
 		        $updvalues[] = "{$cols[$k]} = $val";
 		    }
 			$q = "UPDATE outbound_email SET ".implode(', ', $updvalues)." WHERE id = ".$this->db->quoted($this->id);
